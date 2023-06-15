@@ -7,8 +7,28 @@
   - `npm run test-anagram`
 */
 
-function isAnagram(str1, str2) {
+function splitAndSortAndJoin(tempStr)
+{
+  var tempStr = tempStr.toLowerCase();
+  var sortedAns = tempStr.split("").sort().join("");
+  return sortedAns;
+}
+
+function isAnagram(str1, str2)
+{
+
+  if (splitAndSortAndJoin(str1) == splitAndSortAndJoin(str2))
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
 
 }
 
 module.exports = isAnagram;
+
+let answer = isAnagram("spar", "rasp");
+console.log(answer);
